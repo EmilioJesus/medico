@@ -586,7 +586,7 @@ class perfil_paciente extends Component {
       return (
          <div onload={this.inicio}>
             <div className="App" id="datos">
-               <MenuLoggedUser />
+               <MenuLoggedUser cerrar_sesion={this.cerrar_sesion} />
                <br />
                <h1 className="titulo">
                   Mi perfil <i className="ri-user-heart-fill"></i>

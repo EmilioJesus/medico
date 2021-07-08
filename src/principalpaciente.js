@@ -4,6 +4,8 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import ContenedorCard from "./Components/Cards/ContentCard";
 import ContenedorTestimonialOpinar from "./Components/Cards/ContenedorTestimonialOpinar";
+import MenuLoggedUser from "./Components/Menu/MenuLoggedUser";
+
 const img = require.context("./imagenes", true);
 class principalpaciente extends Component {
    componentDidMount() {
@@ -898,13 +900,7 @@ class principalpaciente extends Component {
                className="head"
                onLoad={(this.logeado, this.especialidad, this.estado)}
             >
-               <div className="menu">
-                  <a href="/perfil_paciente">Perfil</a>
-                  <a href="/citaspaciente">Citas</a>
-                  <a href="" onClick={this.cerrar_sesion}>
-                     Cerrar Sesion
-                  </a>
-               </div>
+               <MenuLoggedUser cerrar_sesion={this.cerrar_sesion} />
 
                <div className="iconoForm">
                   <img src={img("./medico-header.svg").default} alt="" />

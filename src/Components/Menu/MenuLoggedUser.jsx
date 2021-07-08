@@ -33,10 +33,9 @@ const MenuLoggedUser = ({ cerrar_sesion }) => {
 
          <div ref={refContent} className="contentMenu">
             <div className="menuMostrarMovil">
-               <a href="/principal">Principal</a>
-
+               <a href="/Home">Principal</a>
+               <a href="/perfil_paciente">Mi perfil</a>
                <a href="/citaspaciente">Citas</a>
-
                <a href="#" onClick={cerrar_sesion}>
                   Cerrar Sesion
                </a>

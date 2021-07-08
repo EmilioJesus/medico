@@ -1,0 +1,184 @@
+html {
+   box-sizing: border-box;
+   font-family: monospace;
+   font-size: 16px;
+   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+   overflow-x: hidden;
+   background: rgba(190, 227, 219, 1);
+   text-align: center;
+   font-family: "Roboto", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+input,
+button,
+label,
+select {
+   outline: none;
+   border: none;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+a,
+p,
+label,
+h1,
+h2,
+h3,
+li {
+   user-select: none;
+   list-style: none;
+}
+
+hr {
+   margin: 1rem auto;
+   width: 100%;
+   border: thin solid #000;
+}
+
+.contentBlanco {
+   padding: 1rem;
+   background: rgba(250, 249, 249, 1);
+   border-radius: 20px;
+   box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+.contentApricot,
+.Salud {
+   padding: 0.5rem;
+   background: var(--apricot);
+   border-radius: 20px;
+   box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+button,
+input,
+optgroup,
+option,
+select,
+textarea {
+   padding: 0.25rem;
+   font-family: inherit;
+   font-size: 1rem;
+}
+
+button {
+   padding: 0.5rem 1rem;
+   font-family: inherit;
+   font-size: 1rem;
+   /* border: 1px solid #000000; */
+   border-radius: 11px;
+   background: transparent;
+}
+
+button,
+input[type="button"],
+input [type="submit"],
+input [type="reset"],
+input [type="checkbox"],
+input [type="radio"],
+label,
+select {
+   cursor: pointer;
+}
+
+textarea {
+   resize: none;
+}
+
+/** 
+* ? GRID
+*/
+
+.contenedor,
+.contenedor-fluid {
+   display: block;
+   width: 100%;
+   margin: 1rem auto;
+   /* background-color: aqua; */
+}
+
+.contenedor {
+   max-width: 80%;
+}
+
+/** 
+ * ! GRID
+*/
+
+.grid {
+   display: grid;
+   gap: 1.5rem;
+}
+
+/* Utilizar los breakpoints en Ems 
+ los pixeles son RELATIVOS a la 
+ resolucion de pantalla del dispositivo
+ que lo visualiza
+
+ 320px / 16px = 20ems
+ 480px / 16px = 30ems
+ 600px / 16px = 37.5em
+ 768px / 16px = 48em
+ 1024px / 16px = 64em
+ 1200px / 16px = 75em 
+*/
+.col-fluida {
+   justify-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.sm-col-1 {
+   grid-template-columns: 1fr;
+}
+.sm-col-2 {
+   grid-template-columns: repeat(2, 1fr);
+}
+.sm-col-3 {
+   grid-template-columns: repeat(3, 1fr);
+}
+.sm-col-4 {
+   grid-template-columns: repeat(4, 1fr);
+}
+.sm-col-5 {
+   grid-template-columns: repeat(5, 1fr);
+}
+.sm-col-6 {
+   grid-template-columns: repeat(6, 1fr);
+}
+.sm-col-7 {
+   grid-template-columns: repeat(7, 1fr);
+}
+.sm-col-8 {
+   grid-template-columns: repeat(8, 1fr);
+}
+.sm-col-9 {
+   grid-template-columns: repeat(9, 1fr);
+}
+.sm-col-10 {
+   grid-template-columns: repeat(10, 1fr);
+}
+.sm-col-11 {
+   grid-template-columns: repeat(11, 1fr);
+}
+.sm-col-12 {
+   grid-template-columns: repeat(12, 1fr);
+}

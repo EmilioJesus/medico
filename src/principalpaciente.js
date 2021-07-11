@@ -23,7 +23,6 @@ class principalpaciente extends Component {
          .get()
          .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-               console.log(`${doc.id} => ${doc.data().Estado}`);
                especialidad.push(doc.data().Especialidad);
             });
             for (var x = 0; x <= especialidad.length; x++) {
@@ -40,7 +39,6 @@ class principalpaciente extends Component {
          .get()
          .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-               console.log(`${doc.id} => ${doc.data().Estado}`);
                estado.push(doc.data().Estado);
             });
             for (var x = 0; x <= estado.length; x++) {
@@ -476,7 +474,6 @@ class principalpaciente extends Component {
             .where("Estado", "==", estado)
             .onSnapshot((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   var codijo = doc.id;
                   var nombre1 = doc.data().Nombre;
                   var apellidopaterno = doc.data().ApellidoPaterno;
@@ -512,7 +509,6 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            lunes.push(doc.data().hora);
                            lunes1.push(doc.id);
                         });
@@ -525,7 +521,6 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            martes.push(doc.data().hora);
                            martes1.push(doc.id);
                         });
@@ -540,7 +535,6 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            miercoles.push(doc.data().hora);
                            miercoles1.push(doc.id);
                         });
@@ -553,7 +547,6 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            jueves.push(doc.data().hora);
                            jueves1.push(doc.id);
                         });
@@ -566,7 +559,6 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            viernes.push(doc.data().hora);
                            viernes1.push(doc.id);
                         });
@@ -579,7 +571,6 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            sabado.push(doc.data().hora);
                            sabado1.push(doc.id);
                         });
@@ -592,13 +583,11 @@ class principalpaciente extends Component {
                      .get()
                      .then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
-                           console.log(`${doc.id} => ${doc.data()}`);
                            domingo.push(doc.data().hora);
                            domingo1.push(doc.id);
                         });
                         resultados.innerHTML += `
                         <div class="animate__animated animate__fadeIn">
-                </br><label>${codijo}</label></br>
                 <img src="${imagenperfil}" style="width:13rem"/></br>
                 <label>Nombre:Dr.${nombre}</label></br>
                 <label>Cedula:${cedula}</label></br>
@@ -608,11 +597,11 @@ class principalpaciente extends Component {
                 <label>Descripcion:${descripcion}</label></br>
                 <label>Estado:${estadores}</label></br>
                 <label>Lunes-${lunesfecha}:</lable>${lunes
-                           .map(
-                              (val, index) =>
-                                 `<a href="/agendar?id=${codijo}&horario=${val}&indice=${lunes1[index]}&dia=Lunes&fecha=${lunesfecha}&tipoconsulta=${consultatipo}&costo=${costo}">${val}</a>&nbsp&nbsp&nbsp&nbsp`
-                           )
-                           .join(" ")}</br>
+                  .map(
+                     (val, index) =>
+                        `<a href="/agendarmedico?id=${codijo}&horario=${val}&indice=${lunes1[index]}&dia=Lunes&fecha=${lunesfecha}&tipoconsulta=${consultatipo}&costo=${costo}">${val}</a>&nbsp&nbsp&nbsp&nbsp`
+                  )
+                  .join(" ")}</br>
                 <label>Martes-${martesfecha}:</lable>${martes
                            .map(
                               (val, index) =>
@@ -660,7 +649,6 @@ class principalpaciente extends Component {
             .where("Estado", "==", estado)
             .onSnapshot((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   var codijo = doc.id;
                   var nombre1 = doc.data().Nombre;
                   var apellidopaterno = doc.data().ApellidoPaterno;
@@ -786,7 +774,6 @@ class principalpaciente extends Component {
                         });
                         resultados.innerHTML += `
                         <div class="animate__animated animate__fadeIn">
-                </br><label>${codijo}</label></br>
                 <img src=${imagenperfil} style="width:13rem"/></br>
                 <label>Nombre:Dr.${nombre}</label></br>
                 <label>Cedula:${cedula}</label></br>

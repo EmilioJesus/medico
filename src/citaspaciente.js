@@ -140,11 +140,6 @@ class citaspaciente extends React.Component {
                           `;
                      }
                   });
-                  if(citas.innerHTML=="")
-                  {
-                     citas.innerHTML += `<h2>Todavia no hay resultados</h2></br>`
-
-                  }
                });
          }
       });
@@ -161,6 +156,7 @@ class citaspaciente extends React.Component {
             db.collection("Usuarios/" + uid + "/Citas")
                .doc(id)
                .onSnapshot((doc) => {
+                  console.log(`${doc.id} => ${doc.data()}`);
                   if (doc.exists) {
                      var imagen = doc.data().Imagenperfil;
                      var nombre = doc.data().Nombrecita;
@@ -379,11 +375,6 @@ class citaspaciente extends React.Component {
                           <label>Comentario: ${comentario}</label></br>
                           `;
                   });
-                  if(citas.innerHTML=="")
-                  {
-                     citas.innerHTML += `<h2>Todavia no hay resultados</h2></br>`
-
-                  }
                });
          }
       });
@@ -435,11 +426,6 @@ class citaspaciente extends React.Component {
                           
                           `;
                   });
-                  if(citas.innerHTML=="")
-                  {
-                     citas.innerHTML += `<h2>Todavia no hay resultados</h2></br>`
-
-                  }
                });
          }
       });

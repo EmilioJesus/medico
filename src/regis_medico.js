@@ -12,20 +12,39 @@ class regis_medico extends Component {
    regis_medi() {
       //recuperacion de los datos de la caja de texto
       const nombre = document.getElementById("nombreMedi").value;
-      const apellidoPaterno = document.getElementById("apellidoPaternoMedi").value;
-      const apellidoMaterno = document.getElementById("apellidoMaternoMedi").value;
+      alert(nombre);
+      const apellidoPaterno = document.getElementById(
+         "apellidoPaternoMedi"
+      ).value;
+      alert(apellidoPaterno);
+      const apellidoMaterno = document.getElementById(
+         "apellidoMaternoMedi"
+      ).value;
+      alert(apellidoMaterno);
       const especialidad = document.getElementById("selectespecialidad").value;
+      alert(especialidad);
       const cedula = document.getElementById("cedulaProMedi").value;
+      alert(cedula);
       const telefono = document.getElementById("telefonoMedi").value;
+      alert(telefono);
       const pais = document.getElementById("paisMedi").value;
+      alert(pais);
       const estado = document.getElementById("selectestado").value;
+      alert(estado);
       const fecha = document.getElementById("fechaNaciMedi").value;
+      alert(fecha);
       const correo = document.getElementById("correoElecMedi").value;
+      alert(correo);
       const correo1 = document.getElementById("correoElecunoMedi").value;
+      alert(correo1);
       const contra = document.getElementById("contraselaUnoMedi").value;
+      alert(contra);
       const contra1 = document.getElementById("contraselaDosMedi").value;
+      alert(contra);
       const describir = document.getElementById("describeTrabajoMedi").value;
+      alert(describir);
       const checar = document.getElementById("checarMedi").checked;
+      alert(checar);
       var hoy = new Date();
       var fechainscripcion =
          hoy.getUTCFullYear() +

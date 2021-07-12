@@ -10,9 +10,11 @@ class regis_pacientes extends Component {
    regis_usu() {
       //recuperacion de los datos de la caja de texto
       const correo = document.getElementById("correoElec").value;
+      alert(correo);
       const contra = document.getElementById("contraselaUno").value;
+      alert(contra);
       const contra1 = document.getElementById("contraselaDos").value;
-      const fecha = document.getElementById("fechanacimiento").value;
+      alert(contra);
       //checar si las cajas de texto no estan vacias
       if (correo !== "" && contra !== "" && contra1 !== "") {
          alert("ninguno de los campos esta vacio");
@@ -38,7 +40,7 @@ class regis_pacientes extends Component {
                            Telefono: "",
                            Pais: "",
                            Estado: "",
-                           Fecha: fecha,
+                           Fecha: "",
                            Email: correo,
                            TipoUsuario: "Paciente",
                            ImagenPerfil: logo,
@@ -172,17 +174,6 @@ class regis_pacientes extends Component {
                   <input
                      type="password"
                      id="contraselaDos"
-                     className="input"
-                     required
-                  />
-               </label>
-               <br />
-               <label>
-                  Fecha de Nacimiemto:
-                  <br />
-                  <input
-                     type="date"
-                     id="fechanacimiento"
                      className="input"
                      required
                   />

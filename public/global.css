@@ -133,6 +133,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 /**
+*! RESULTADOS DE BUSQUEDA
+*/
+
+.resultados {
+   margin: 3rem 0;
+}
+
+/**
 *! TARJETAS PAGINA PRINCIPAL
  */
 .card {

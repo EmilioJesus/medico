@@ -597,7 +597,7 @@ class principalpaciente extends Component {
                            domingo1.push(doc.id);
                         });
                         resultados.innerHTML += `
-                        <div class="animate__animated animate__fadeIn">
+                        <div class="resultados contentApricot animate__animated animate__fadeIn">
                 </br><label>${codijo}</label></br>
                 <img src="${imagenperfil}" style="width:13rem"/></br>
                 <label>Nombre:Dr.${nombre}</label></br>
@@ -785,7 +785,7 @@ class principalpaciente extends Component {
                            domingo1.push(doc.id);
                         });
                         resultados.innerHTML += `
-                        <div class="animate__animated animate__fadeIn">
+                        <div class=" resultados contentApricot animate__animated animate__fadeIn">
                 </br><label>${codijo}</label></br>
                 <img src=${imagenperfil} style="width:13rem"/></br>
                 <label>Nombre:Dr.${nombre}</label></br>

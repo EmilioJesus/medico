@@ -587,7 +587,7 @@ class principalmedico extends Component {
                            domingo1.push(doc.id);
                         });
                         resultados.innerHTML += `
-                <div class="animate__animated animate__fadeIn">
+                <div class="resultados contentApricot animate__animated animate__fadeIn">
                 </br><label>${codijo}</label></br>
                 <img src=${imagenperfil} style="width:13rem"/></br>
                 <label>Nombre:Dr.${nombre}</label></br>
@@ -775,7 +775,7 @@ class principalmedico extends Component {
                            domingo1.push(doc.id);
                         });
                         resultados.innerHTML += `
-                <div class="animate__animated animate__fadeIn">
+                <div class=" resultados contentApricot animate__animated animate__fadeIn">
                 </br><label>${codijo}</label></br>
                 <div ><img src=${imagenperfil} alt="Foto doctor"style="width:13rem"/></div>
                 <label>Nombre:Dr.${nombre}</label></br>
@@ -926,7 +926,7 @@ class principalmedico extends Component {
             </div>
 
             <div className="contenedor">
-               <div id="resultadosbusqueda1" style={{ overflow: "auto" }}></div>
+               <div id="resultadosbusqueda1"></div>
             </div>
 
             <div>

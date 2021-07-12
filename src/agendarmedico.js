@@ -25,8 +25,6 @@ class agendarmedico extends Component {
       );
       var horarioinicio = horario.split("-");
       var hora = hoy.getHours() + ":" + hoy.getMinutes();
-      alert(fechahoy);
-      alert(cita);
       if (cita < fechahoy) {
          alert("el dia de la cita ya paso");
 

@@ -21,7 +21,6 @@ class perfil_doctor extends Component {
             db.collection("Usuarios")
                .doc(uid)
                .onSnapshot((doc) => {
-                  console.log("Current data: ", doc.data());
                   const apeliidomaterno = doc.data().ApellidoMaterno;
                   const apeliidopaterno = doc.data().ApellidoPaterno;
                   const nombre = doc.data().Nombre;
@@ -109,7 +108,6 @@ class perfil_doctor extends Component {
          var file = document.getElementById("file").files[0];
          console.log(file);
          if (!file) {
-            console.log("esta vacio ");
             db.collection("Usuarios").doc(uid).update({
                Nombre: nombre,
                ApellidoPaterno: apellidop,
@@ -130,7 +128,6 @@ class perfil_doctor extends Component {
                   console.log(error);
                },
                function () {
-                  console.log("Archivo o imagen arriba");
                   var dowloadURL = uploadTask.snapshot.ref
                      .getDownloadURL()
                      .then((url) => {
@@ -246,7 +243,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   lunes.push(doc.data().hora);
                });
             });
@@ -258,7 +254,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   martes.push(doc.data().hora);
                });
             });
@@ -270,7 +265,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   miercoles.push(doc.data().hora);
                });
             });
@@ -282,7 +276,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   jueves.push(doc.data().hora);
                });
             });
@@ -294,7 +287,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   viernes.push(doc.data().hora);
                });
             });
@@ -306,7 +298,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   sabado.push(doc.data().hora);
                });
             });
@@ -318,7 +309,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   domingo.push(doc.data().hora);
                });
 
@@ -368,7 +358,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   lunes.push(doc.data().hora);
                });
             });
@@ -380,7 +369,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   martes.push(doc.data().hora);
                });
             });
@@ -392,7 +380,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   miercoles.push(doc.data().hora);
                });
             });
@@ -404,7 +391,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   jueves.push(doc.data().hora);
                });
             });
@@ -416,7 +402,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   viernes.push(doc.data().hora);
                });
             });
@@ -428,7 +413,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   sabado.push(doc.data().hora);
                });
             });
@@ -440,7 +424,6 @@ class perfil_doctor extends Component {
             .get()
             .then((querySnapshot) => {
                querySnapshot.forEach((doc) => {
-                  console.log(`${doc.id} => ${doc.data()}`);
                   domingo.push(doc.data().hora);
                });
 

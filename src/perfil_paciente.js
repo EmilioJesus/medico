@@ -28,7 +28,6 @@ class perfil_paciente extends Component {
             db.collection("Usuarios")
                .doc(uid)
                .onSnapshot((doc) => {
-                  console.log("Current data: ", doc.data());
                   const apeliidomaterno = doc.data().ApellidoMaterno;
                   const apeliidopaterno = doc.data().ApellidoPaterno;
                   const nombre = doc.data().Nombre;
@@ -102,7 +101,6 @@ class perfil_paciente extends Component {
          var file = document.getElementById("file").files[0];
          console.log(file);
          if (!file) {
-            console.log("esta vacio ");
             db.collection("Usuarios").doc(uid).update({
                Nombre: nombre,
                ApellidoPaterno: apellidop,
@@ -124,7 +122,6 @@ class perfil_paciente extends Component {
                   console.log(error);
                },
                function () {
-                  console.log("Archivo o imagen arriba");
                   var dowloadURL = uploadTask.snapshot.ref
                      .getDownloadURL()
                      .then((url) => {
@@ -188,7 +185,6 @@ class perfil_paciente extends Component {
                (querySnapshot) => {
                   document.getElementById("alergias").innerText = " ";
                   querySnapshot.forEach((doc) => {
-                     console.log(`${doc.id} => ${doc.data()}`);
                      var mostraralergias = document.getElementById("alergias");
                      mostraralergias.innerHTML += `
               <table class="tabla">
@@ -272,7 +268,6 @@ class perfil_paciente extends Component {
                (querySnapshot) => {
                   document.getElementById("habitos").innerText = " ";
                   querySnapshot.forEach((doc) => {
-                     console.log(`${doc.id} => ${doc.data()}`);
                      var mostrarhabitos = document.getElementById("habitos");
                      mostrarhabitos.innerHTML += `
               <table class="tabla" >
@@ -360,7 +355,6 @@ class perfil_paciente extends Component {
                (querySnapshot) => {
                   document.getElementById("patologicos").innerText = " ";
                   querySnapshot.forEach((doc) => {
-                     console.log(`${doc.id} => ${doc.data()}`);
                      var mostrarpatologicos =
                         document.getElementById("patologicos");
                      mostrarpatologicos.innerHTML += `
@@ -450,7 +444,6 @@ class perfil_paciente extends Component {
                (querySnapshot) => {
                   document.getElementById("quirurgicos").innerText = " ";
                   querySnapshot.forEach((doc) => {
-                     console.log(`${doc.id} => ${doc.data()}`);
                      var mostrarpatologicos =
                         document.getElementById("quirurgicos");
                      mostrarpatologicos.innerHTML += `
@@ -535,7 +528,6 @@ class perfil_paciente extends Component {
                (querySnapshot) => {
                   document.getElementById("vacunas").innerText = " ";
                   querySnapshot.forEach((doc) => {
-                     console.log(`${doc.id} => ${doc.data()}`);
                      var mostrarvacunas = document.getElementById("vacunas");
                      mostrarvacunas.innerHTML += `
               <table class="tabla">

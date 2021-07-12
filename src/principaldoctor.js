@@ -61,7 +61,6 @@ class principaldoctor extends Component {
                         .orderBy("timestamp", "asc")
                         .onSnapshot((querySnapshot) => {
                            querySnapshot.forEach((doc) => {
-                              console.log(`${doc.id} => ${doc.data()}`);
                               var imagen = doc.data().Imagenperfil;
                               var nombre = doc.data().Nombrecita;
                               var apellidop = doc.data().ApellidoPcita;
@@ -171,6 +170,11 @@ class principaldoctor extends Component {
                         `;
                               }
                            });
+                           if(citas.innerHTML=="")
+                           {
+                              citas.innerHTML += `<h2>Todavia no hay resultados</h2></br>`
+         
+                           }
                         });
                   } else {
                      window.location.href = "/";
@@ -226,6 +230,11 @@ class principaldoctor extends Component {
                         <label>Comentario: ${comentario}</label></br>
                         `;
                   });
+                  if(citas.innerHTML=="")
+                  {
+                     citas.innerHTML += `<h2>Todavia no hay resultados</h2></br>`
+
+                  }
                });
          }
       });
@@ -277,6 +286,11 @@ class principaldoctor extends Component {
                           
                           `;
                   });
+                  if(citas.innerHTML=="")
+                  {
+                     citas.innerHTML += `<h2>Todavia no hay resultados</h2></br>`
+
+                  }
                });
          }
       });
